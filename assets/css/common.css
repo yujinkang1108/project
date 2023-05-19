@@ -1,0 +1,224 @@
+/* 공용소스 */
+
+body{
+    font-size: 12px;
+    line-height: 16px;
+    color: #202020;
+    font-family: -apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif;
+    min-width: 1190px;
+}
+
+strong{
+    font-weight: 700;
+}
+
+/* blind 소스 */
+.blind{
+    position: absolute;
+    width: 1px; height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+}
+
+.header .logo a,
+.sc-news .group-issue .issue-area .link-media::after,
+.sc-news .group-title .link-title:before,
+.sc-news .group-title .link-title:after,
+.gnb .nav-area .nav-item .ic-mail::before,
+.gnb .btn-more:after,
+.gnb .nav-item .shop:before,
+.gnb .nav-item .shop-live:before,
+.group-weather .degree-box .max:before,
+.header .service-area a::after,
+.header .search-area .btn-submit::after,
+.sc-news .group-title .set-area .btn-set::after,
+.sc-sidenews .link-news .badge::before,
+.sc-sidenews .link-news .rate-down::before,
+.sc-login .link-login::before,
+.sc-login .sub-area .link-join:before,
+.sc-login .sub-area:before,
+.sc-sidenews .nav-wrap .btn-nav::after,
+.sc-sidenews .nav-wrap .btn-nav.prev:before,
+.sc-sidenews .nav-wrap .btn-nav.next:before,
+.sc-themepost .btn-set::before,
+.sc-themepost .group-category .pm-btn.prev .ico-btn,
+.sc-themepost .group-category .pm-btn.next .ico-btn,
+.sc-themepost .topstory-thumb .pm-ico-play,
+.sc-themepost .media-area .pm-ico-play,
+.sc-themepost .title-wrap .title::after,
+.footer .group-notice .link-all::after{
+    background-image: url(../img/sp-bg.png);
+    background-size: 442px;
+    background-repeat: no-repeat;
+}
+
+.sc-shopcast .link-shop .ls-link:before,
+.sc-shopcast .link-shop .ls-link::after,
+.sc-shopcast .shop-control .btn-prev:before,
+.sc-shopcast .shop-control .btn-next:before,
+.sc-shopcast .shop-page .btn-prev::before,
+.sc-shopcast .shop-page .btn-next::before,
+.sc-shopcast .title .link-logo:before,
+.sc-shopcast .thumb-box+.thumb-box:before,
+.sc-shopcast .thumb-box .ico-one-plus{
+    background-image: url(../img/sp-shop.png);
+    background-size: 129px;
+    background-repeat: no-repeat;
+}
+
+.gnb .weather-area .ic-weather{
+    background-image: url(../img/sp-weather.png);
+    background-size: 215px;
+    background-repeat: no-repeat;
+}
+
+/* thumb=box */
+
+.thumb-box{
+    position: relative;
+}
+
+.thumb-box::after{
+    position: absolute;
+    content: '';
+    top: 0; left: 0; right: 0; bottom: 0;
+    border: 1px solid #000;
+    opacity: 0.1;
+}
+
+/* .pm-btn */
+
+.pm-btn.prev {
+    position: absolute;
+    left: -22px;
+    z-index: 10;
+}
+
+.pm-btn.next {
+    position: absolute;
+    right: -13px;
+    z-index: 10;
+}
+
+.pm-ico-play {
+    display: inline-block;
+    width: 24px;
+    height: 28px;
+    background-position: -246px -342px;
+    background-repeat: no-repeat;
+    vertical-align: top;
+}
+
+.sc-themepost .category {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    font-weight: 700;
+}
+
+.sc-themepost .theme-list .title {
+    display: block;
+    display: -webkit-box;
+    overflow: hidden;
+    max-height: 40px;
+    line-height: 20px;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    margin-top: 3px;
+    font-size: 13px;
+}
+
+/* sc-themepost runtime */
+
+.sc-themepost .runtime {
+    position: absolute;
+    right: 8px;
+    bottom: 6px;
+    padding: 2px 4px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    font-size: 11px;
+    line-height: 14px;
+    color: #fff;
+}
+
+.sc-themepost .runtime .runtime-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: .7;
+    filter: alpha(opacity=70);
+    background-color: #000;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    color: transparent;
+}
+
+.sc-themepost .runtime .time {
+    position: relative;
+    z-index: 1;
+}
+
+/* .thumb-bd */
+
+.thumb-dim{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: .1;
+    background-color: #000;
+}
+.thumb-bd{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: .06;
+    border: 1px solid #000;
+}
+
+/* sc-shopcast shop-control */
+
+.sc-shopcast .shop-wrap .shop-control {
+    position: absolute;
+    top: -8px;
+    right: 0;
+    text-align: right;
+    display: flex;
+
+}
+.sc-shopcast .shop-control .num-box{
+    line-height: 29px;
+    color: grey;
+}
+
+.sc-shopcast .shop-control .current {
+    margin-right: 4px;
+    color: #202020;
+    font-weight: 700;
+}
+
+.sc-shopcast .shop-control .btn-box{
+    display: flex;
+    overflow: hidden;
+    margin-left: 7px;
+} 
+
+.sc-shopcast .shop-control .btn {
+    float: left;
+    background-color: #fff;
+    border: 1px solid #dae1e6;
+}
+
+.sc-shopcast .shop-control .btn+.btn {
+    margin-left: -1px;
+}
+
